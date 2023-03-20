@@ -13,3 +13,7 @@ resource "aws_route53_record" "elb_record" {
     evaluate_target_health = true
   }
 }
+
+output "route53_ns" {
+  value = aws_route53_zone.route53_zone.name_servers
+}
